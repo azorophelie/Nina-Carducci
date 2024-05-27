@@ -240,10 +240,9 @@
         return;
       }
       $(".active-tag").removeClass("active active-tag");
-      $(this).addClass("active-tag");
-
+      $(this).addClass("active active-tag active-filter"); // Ajoutez la classe active-filter
       var tag = $(this).data("images-toggle");
-
+    
       $(".gallery-item").each(function() {
         $(this)
           .parents(".item-column")
