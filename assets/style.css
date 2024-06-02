@@ -53,8 +53,8 @@ body {
 .picture.left::before {
 	content: ' ';
 	background-color: #E5975F;
-	width: 552px;
-	height: 550px;
+	width: 374px;
+    height: 329px;
 	position: absolute;
 	bottom: 0;
 	left: 0;
@@ -67,10 +67,10 @@ body {
 	z-index: 0;
 }
 
-img {
-    width: auto;
-    height: auto;
+.picture img {
+	width: 100%;
 }
+
 
 /* Styles pour les images dans la galerie et le carrousel */
 .carousel-item img,
@@ -119,9 +119,7 @@ img {
 	font-size: 14px;
 }
 
-#gallery {
-	/*	min-height: 100vh; */
-}
+
 .title{
 	text-align: center;
 	padding-block: 2em;
