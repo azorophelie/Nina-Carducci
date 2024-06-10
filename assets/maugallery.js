@@ -13,6 +13,7 @@
       }
       $.fn.mauGallery.listeners(options);
 
+      // Déplacer l'élément et le mettre dans une colonne 
       $(this)
         .children(".gallery-item")
         .each(function(index) {
@@ -28,7 +29,7 @@
             tagsCollection.push(theTag);
           }
         });
-
+      // Créer la lightbox si activée dans les options
       if (options.showTags) {
         $.fn.mauGallery.methods.showItemTags(
           $(this),
@@ -42,11 +43,11 @@
   };
   $.fn.mauGallery.defaults = {
     columns: 3,
-    lightBox: true,
+    lightBox: true, // activer la lightbox
     lightboxId: null,
     showTags: true,
     tagsPosition: "bottom",
-    navigation: true
+    navigation: true // pour activer la navigation dans la lightbox
   };
   $.fn.mauGallery.listeners = function(options) {
     $(".gallery-item").on("click", function() {
@@ -108,12 +109,15 @@
         element.addClass("img-fluid");
       }
     },
+
+    // Ouvrir la lightbox
     openLightBox(element, lightboxId) {
       $(`#${lightboxId}`)
         .find(".lightboxImage")
         .attr("src", element.attr("src"));
       $(`#${lightboxId}`).modal("toggle");
     },
+    // Afficher l'image précédente dans la lightbox
     prevImage(lightboxId) {
       let activeImageSrc = $(`#${lightboxId} .lightboxImage`).attr("src");
       let imagesCollection = $(".gallery-item").filter(function() {
@@ -124,6 +128,7 @@
       let prevImageSrc = imagesCollection.eq(prevIndex).attr("src");
       $(`#${lightboxId} .lightboxImage`).attr("src", prevImageSrc);
     },
+    // Afficher l'image suivante dans la lightbox
     nextImage(lightboxId) {
       let activeImageSrc = $(`#${lightboxId} .lightboxImage`).attr("src");
       let imagesCollection = $(".gallery-item").filter(function() {
@@ -134,6 +139,7 @@
       let nextImageSrc = imagesCollection.eq(nextIndex).attr("src");
       $(`#${lightboxId} .lightboxImage`).attr("src", nextImageSrc);
     },
+    // Créer la lightbox
     createLightBox(gallery, lightboxId, navigation) {
       gallery.append(`<div class="modal fade" id="${
         lightboxId ? lightboxId : "galleryLightbox"
@@ -174,6 +180,7 @@
         console.error(`Unknown tags position: ${position}`);
       }
     },
+    // Filtrer les images de la galerie 
     filterByTag() {
       if ($(this).hasClass("active-tag")) {
         return;

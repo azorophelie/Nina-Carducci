@@ -20,7 +20,7 @@
     <meta name="twitter:title" content="Nina Carducci - Photographe Professionnelle">
     <meta name="twitter:description" content="Nina Carducci, photographe professionnelle en Île-de-France, spécialisée en portraits, mariages, concerts et entreprises. Découvrez mon portfolio et contactez-moi pour des services sur mesure.">
     <meta name="twitter:image" content="https://azorophelie.github.io/OpenClassrooms-Projet-4/assets/images/slider/ryoji-iwata-wUZjnOv7t0g-unsplash.webp">
-    
+    <!-- Style / Fonts / Titre -->
     <link rel="stylesheet" href="./assets/bootstrap/bootstrap.min.css">
     <link rel="stylesheet" href="./assets/style.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -28,10 +28,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter&family=Spectral:ital,wght@0,400;1,300;1,400;1,800&display=swap" rel="stylesheet">
     <link rel="preload" as="image" href="./assets/images/slider/ryoji-iwata-wUZjnOv7t0g-unsplash.webp">
 	<title>Nina Carducci</title>
+
+	<!-- Schema.org -->
 	<script type="application/ld+json">
 		{
 			"@context": "https://schema.org",
-			"@type": "PhotographyStudio",
+			"@type": "LocalBusiness",
 			"name": "Nina Carducci Photographe",
 			"image": "https://azorophelie.github.io/OpenClassrooms-Projet-4/assets/images/nina.webp",
 			"@id": "https://azorophelie.github.io/OpenClassrooms-Projet-4/",
@@ -49,33 +51,53 @@
 				"latitude": 44.8465743,
 				"longitude": -0.6065366999999999
 			},
-			"openDays": [
-				{
-					"@type": "OpenHours",
-					"dayOfWeek": [
-						"Monday",
-						"Tuesday",
-						"Wednesday",
-						"Thursday",
-						"Friday"
-					],
-					"opens": "10:00",
-					"closes": "19:00"
-				}
-			]
-		}
+			"openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Monday",
+      "opens": "10:00",
+      "closes": "19:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Tuesday",
+      "opens": "10:00",
+      "closes": "19:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Wednesday",
+      "opens": "10:00",
+      "closes": "19:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Thursday",
+      "opens": "10:00",
+      "closes": "19:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Friday",
+      "opens": "10:00",
+      "closes": "19:00"
+    }
+  ],
+  "priceRange": "€50-€400"
+}
 	</script>
 </head>
 
 
 
 <body>
+	<!-- Header Nav -->
 <div class="top-header">
 	<h1 class="name">Nina Carducci</h1>
 
 	<div class="nav">   
 		<ul>
-			<li><a href="#about">À propos</a></li>
+			<li><a href="#about" class="nav-header">À propos</a></li>
 			<li><a href="#gallery">Galerie</a></li>
 			<li><a href="#services">Service</a></li>
 			<li><a href="#contact">Contact</a></li>
@@ -84,7 +106,7 @@
 	</div>
 </div>
 <div id="header">
-
+	<!--Header Carousel -->
 	<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
 		<div class="carousel-indicators">
 			<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -112,6 +134,7 @@
 		</button>
 	</div>
 </div>
+<!-- Photo Nina et description -->
 <div id="about">
 	<div class="picture left">
 		<img src="./assets/images/nina.webp" alt="Photo de Nina Carducci" width="560" height="558" style="max-width: 100%; height: auto;">
@@ -123,6 +146,7 @@
 			C’est ce que je vous propose : saisir ces merveilleux moments au travers de mon regard, mon approche, ma technique. Rendre ces moments immortels, afin que vous puissiez y puiser de l’amour, du bonheur, de la tendresse et de lumière à chaque fois que vous poserez les yeux sur vos photos.</p>
 	</div>
 </div>
+<!-- Galerie -->
 <div id="gallery">
 	<h2 class="title">Portfolio</h2>
 	<div class="container py-3">
@@ -138,6 +162,7 @@
 			<img data-gallery-tag="Entreprises" class="gallery-item" src="./assets/images/gallery/entreprise/mateus-campos-felipe-Fsgzm8N0hIY-unsplash.webp" alt="photo de Mateus Campose Felipe" loading="lazy" width="466" height="285">
 	</div>
 </div>
+<!-- Citation -->
 	<div class="quote">
 		<figure>
 			<blockquote>
@@ -147,6 +172,7 @@
 		</figure>
 	</div>
 </div>
+<!-- Services avec prix -->
 <div id="services">
 	<h2 class="title">Mes services</h2>
 	<div class="container">
@@ -183,6 +209,7 @@
 		</div>
 	</div>
 </div>
+<!-- Citation-->
 <div class="quote">
 	<figure>
 		<blockquote>
@@ -191,6 +218,7 @@
 		<figcaption class="quote__author">- Richard Avedon</figcaption>
 	</figure>
 </div>
+<!-- Formulaire de contact -->
 <div id="contact">
 	<div class="container">
 		<div class="form-container">
