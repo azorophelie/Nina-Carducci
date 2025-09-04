@@ -8,6 +8,7 @@ L’objectif principal était d’améliorer les performances, le SEO, le réfé
 👉 [Lien vers le site web](https://azorophelie.github.io/Nina-Carducci/)
 
 🚀 *Ce site a été déployé avec GitHub Pages.*
+
 --- 
 
 ## Prérequis et lancement du projet
