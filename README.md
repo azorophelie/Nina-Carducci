@@ -5,8 +5,9 @@
 Ce projet est le site web de la photographe Nina Carducci, optimisé dans le cadre d’une prestation freelance.  
 L’objectif principal était d’améliorer les performances, le SEO, le référencement local, l’accessibilité et de corriger les bugs existants sur la galerie et les filtres.
 
-[Lien vers le site web](https://azorophelie.github.io/Nina-Carducci/)
+👉 [Lien vers le site web](https://azorophelie.github.io/Nina-Carducci/)
 
+🚀 *Ce site a été déployé avec GitHub Pages.*
 --- 
 
 ## Prérequis et lancement du projet
